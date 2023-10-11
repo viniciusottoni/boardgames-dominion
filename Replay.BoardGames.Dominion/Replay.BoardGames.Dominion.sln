@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Replay.BoardGames.Dominion", "Replay.BoardGames.Dominion.csproj", "{FD0A09B4-64FE-4AE5-AF68-088F40826EC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD0A09B4-64FE-4AE5-AF68-088F40826EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD0A09B4-64FE-4AE5-AF68-088F40826EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD0A09B4-64FE-4AE5-AF68-088F40826EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD0A09B4-64FE-4AE5-AF68-088F40826EC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B187ED4B-A38E-4DF9-BC3E-7B8521030225}
+	EndGlobalSection
+EndGlobal
