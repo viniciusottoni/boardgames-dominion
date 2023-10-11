@@ -4,40 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card Game</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        button {
-            margin-top: 10px;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007BFF;
-            color: #fff;
-            cursor: pointer;
-        }
-        input {
-            margin-top: 10px;
-            padding: 5px 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <div class="container">
+    <div class="loading" id="loading">Loading...</div>
+    <div class="container" id="content" style="display: none;">
         <h2>Card Game</h2>
         <p>Enter your nickname:</p>
         <input type="text" id="nickname" placeholder="Nickname">
@@ -46,42 +17,6 @@
         <button onclick="joinRoom()">Join Room</button>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
-    <script>
-        const socket = io('http://localhost:3000');
-
-        function createRoom() {
-            let nickname = document.getElementById('nickname').value;
-            if (!nickname) {
-                alert('Please enter a nickname!');
-                return;
-            }
-            let roomName = prompt("Enter room name:");
-            if (roomName) {
-                socket.emit('joinRoom', { roomName, nickname });
-                localStorage.setItem('nickname', nickname);
-                window.location.href = `room.html?room=${roomName}`;
-            }
-        }
-
-        function joinRoom() {
-            let nickname = document.getElementById('nickname').value;
-            if (!nickname) {
-                alert('Please enter a nickname!');
-                return;
-            }
-            let roomId = prompt("Enter room ID:");
-            if (roomId) {
-                socket.emit('checkRoomExistence', roomId, (exists) => {
-                    if (exists) {
-                        socket.emit('joinRoom', { roomName: roomId, nickname });
-                        localStorage.setItem('nickname', nickname);
-                        window.location.href = `room.html?room=${roomId}`;
-                    } else {
-                        alert('The room does not exist!');
-                    }
-                });
-            }
-        }
-    </script> 
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
