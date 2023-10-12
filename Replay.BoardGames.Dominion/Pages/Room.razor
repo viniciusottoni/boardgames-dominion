@@ -1,0 +1,10 @@
+﻿@page "/room/{roomName}"
+
+<PageTitle>Room</PageTitle>
+
+<GameScreen RoomName="@RoomName"></GameScreen>
+
+@code {
+    [Parameter]
+    public string RoomName { get; set; }
+}
